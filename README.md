@@ -1,6 +1,6 @@
-# React + Vite
+# POSTBIN
 
-__##POSTBIN##__ <br>
+<br>
 An open posting application where user can post anything without authorization.<br>
 **Pastebin but for Posts**
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
