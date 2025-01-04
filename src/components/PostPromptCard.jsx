@@ -13,7 +13,7 @@ const PostPromptCard = () => {
         />
         <div className="flex-1">
           <h2 className="text-lg font-semibold text-gray-800">What's on your mind?</h2>
-          <p className="text-gray-500 mt-1">Share your thoughts, photos, or videos.</p>
+          <p className="text-gray-500 mt-1">Share your thoughts, photos or confessions.</p>
         </div>
       </div>
       <div className="bg-blue-500 text-white py-2 text-center font-semibold">

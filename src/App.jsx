@@ -5,11 +5,12 @@ import Info from "./pages/info";
 import Post from "./pages/post"; 
 import { Routes, Route } from "react-router-dom"; // Import Routes and Route
 
+
 function App() {
   return (
     
       <div>
-        <NavBar />
+        <NavBar /> 
         <main className="main-content"> 
           <Routes>
             <Route path="/" element={<Home />} />
