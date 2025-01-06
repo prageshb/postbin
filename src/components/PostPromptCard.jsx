@@ -7,8 +7,8 @@ const PostPromptCard = () => {
     <Link to="/post" className="block max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
       <div className="p-4 flex items-center">
         <img
-          src="https://via.placeholder.com/40" //Profile picture
-          alt="Profile"
+          src="https://via.placeholder.com/40" //Anonymous Profile picture
+          alt="Anonymous"
           className="w-10 h-10 rounded-full mr-4"
         />
         <div className="flex-1">

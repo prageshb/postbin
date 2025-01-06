@@ -3,12 +3,39 @@ import React, { useState } from 'react';
 const Post = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [photos, setPhotos] = useState(null);
+  const [imageUrl, setImageUrl] = useState(''); // Changed to store image URL as a string
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form submission (e.g., send data to an API)
-    console.log({ title, content, photos });
+
+    const postData = {
+      title,
+      content,
+      imageUrl, // Include the image URL in the data
+    };
+
+    try {
+      const response = await fetch('http://localhost:8080/journi', { // Replace with your actual API endpoint
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      });
+
+      if (response.ok) {
+        // Handle success (e.g., show a success message, reset the form)
+        console.log('Post submitted successfully');
+        setTitle('');
+        setContent('');
+        setImageUrl(''); // Reset to empty string
+      } else {
+        // Handle error
+        console.error('Error submitting post:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+    }
   };
 
   return (
@@ -47,14 +74,15 @@ const Post = () => {
 
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="photos">
-            Photos
+            Image URL
           </label>
           <input
-            type="file"
+            type="text"
             id="photos"
-            onChange={(e) => setPhotos(e.target.files)}
-            multiple
+            value={imageUrl} // Use the same photos state variable
+            onChange={(e) => setImageUrl(e.target.value)} // Update state with the URL
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter the image URL"
           />
         </div>
 

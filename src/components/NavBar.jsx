@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close the menu when a link is clicked
+    setIsOpen(false); // Closes the menu when a link is clicked
   };
 
   return (
@@ -17,13 +17,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-white font-extrabold text-2xl">Journi</span>
+            <a href="/"><span className="text-white font-extrabold text-2xl">Postbin</span></a>
           </div>
           <div className="hidden md:block">
             <div className="ml-auto flex items-baseline space-x-6">
               <Link to="/" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Home</Link>
               <Link to="/post" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Post</Link>
-              <Link to="/info" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Info</Link>
+              <Link to="/info" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>About</Link>
             </div>
           </div>
 
@@ -72,4 +72,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
