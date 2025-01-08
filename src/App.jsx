@@ -1,9 +1,9 @@
 import './App.css';
 import NavBar from "./components/NavBar";
 import Home from "./pages/home"; 
-import Info from "./pages/info"; 
+import About from "./pages/about"; 
 import Post from "./pages/post"; 
-import ApiConfig from "./api/apiConfig"
+import Footer from "./components/Footer";
 
 import { Routes, Route } from "react-router-dom"; // Import Routes and Route
 
@@ -13,15 +13,14 @@ function App() {
     
       <div>
         <NavBar /> 
-        
-        
         <main className="main-content"> 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/info" element={<Info />} />
+            <Route path="/about" element={<About />} />
             <Route path="/post" element={<Post />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     
   );

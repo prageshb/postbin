@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PostCard from "../components/PostCard";
+import PostCar from "../components/PostCar";
 
 const API_URL = "http://localhost:8080/journi"; 
 
@@ -16,7 +17,7 @@ const ApiConfig = () => {
             const postsData =await response.json();
             
           
-        
+            
 
             setData(postsData);
             console.log(data);
@@ -30,13 +31,15 @@ const ApiConfig = () => {
         fetchData();
     }, []);
 
+    const sortedPosts = [...data].sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
+
     return ( 
         <div>
             
             {/* <PostCard post={data} /> */}
 
             {/* Calling postcard component with post argument  */}
-            {data.map(post => (
+            {sortedPosts.map(post => (
         <PostCard
           key={post.id} // Use a unique identifier
           post={post} // Pass the entire post object

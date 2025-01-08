@@ -8,12 +8,14 @@ import PostPromptCard from "../components/PostPromptCard";
 
 const Home = () =>{   
         return (
-            <div className="flex flex-col items-center justify-center h-screen">
-             
-            <PostPromptCard />
-            <ApiConfig />
             
-          </div>   
+             <div>
+            {/* <PostPromptCard /> */}
+            
+            <ApiConfig />
+            </div>
+            
+          
   );
 
 

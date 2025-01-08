@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const PostPromptCard = () => {
   return (
+    <div className=''>
     <Link to="/post" className="block max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
       <div className="p-4 flex items-center">
         <img
@@ -20,6 +21,7 @@ const PostPromptCard = () => {
         Start Posting
       </div>
     </Link>
+    </div>
   );
 };
 

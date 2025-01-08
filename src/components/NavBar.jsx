@@ -13,17 +13,17 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-blue-500 to-indigo-500 shadow-lg">
+    <nav className="bg-[#f5f5e9] from-blue-500 to-indigo-500 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="/"><span className="text-white font-extrabold text-2xl">Postbin</span></a>
+            <a href="/"><span className="text-gray-600 font-extrabold text-2xl">Postbin</span></a>
           </div>
           <div className="hidden md:block">
             <div className="ml-auto flex items-baseline space-x-6">
-              <Link to="/" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Home</Link>
-              <Link to="/post" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Post</Link>
-              <Link to="/info" className="text-white font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>About</Link>
+              <Link to="/" className="text-gray-600 font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Home</Link>
+              <Link to="/post" className="text-gray-600 font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Post</Link>
+              <Link to="/about" className="text-gray-600 font-bold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>About</Link>
             </div>
           </div>
 
@@ -32,7 +32,7 @@ const NavBar = () => {
             <button
               type="button"
               onClick={toggleMenu}
-              className="bg-indigo-600 inline-flex items-center justify-center p-2 rounded-full text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-500 focus:ring-white"
+              className="bg-gray-600 inline-flex items-center justify-center p-2 rounded-full text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-500 focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -47,17 +47,17 @@ const NavBar = () => {
 
       {/* Mobile Sidebar Menu */}
       <div className={`fixed inset-0 flex z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <div className="bg-blue-600 w-64 p-4 flex flex-col items-start space-y-4">
+        <div className="bg-[#f5f5e9] w-64 p-4 flex flex-col items-start space-y-4">
           <div className="flex items-center justify-between w-full">
-            <Link to="/" className="text-white font-bold hover:bg-white hover:text-blue-500 block px-3 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Home</Link>
-            <button onClick={toggleMenu} className="text-white">
+            <Link to="/" className="text-gray-600 font-bold hover:bg-white hover:text-blue-500 block px-3 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Home</Link>
+            <button onClick={toggleMenu} className="text-gray-600">
               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          <Link to="/post" className="text-white font-bold hover:bg-white hover:text-blue-500 block px-3 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Post</Link>
-          <Link to="/info" className="text-white font-bold hover:bg-white hover:text-blue-500 block px-3 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Info</Link>
+          <Link to="/post" className="text-gray-600 font-bold hover:bg-white hover:text-blue-500 block px-3 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Post</Link>
+          <Link to="/about" className="text-gray-600 font-bold hover:bg-white hover:text-blue-500 block px-3 py-2 rounded-full text-lg font-sans transition-all duration-300 cursor-pointer" onClick={handleLinkClick}>Info</Link>
         </div>
       </div>
 
