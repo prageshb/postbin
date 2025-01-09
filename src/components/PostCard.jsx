@@ -13,8 +13,8 @@ const PostCard = ({ post }) => {
   };
 
   return (
-    <div className="inline-flex flex-col items-center">
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ml-20 mt-8">
+    <div className="inline-flex flex-col pt-20 ml-20">
+      <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
         <a href="#">
           <img 
             className="rounded-t-lg h-64 w-64 object-cover" 

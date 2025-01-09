@@ -45,6 +45,7 @@ const ApiConfig = () => {
           post={post} // Pass the entire post object
         />
       ))}
+      <div className="h-8"></div>
                 {/* <ul>
                     {data.map((item) => (
                         <li key={item.id}>{item.title}</li> // Adjust based on your data structure
